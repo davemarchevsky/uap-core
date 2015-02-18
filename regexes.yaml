@@ -878,6 +878,10 @@ os_parsers:
   - regex: 'SunOS'
     os_replacement: 'Solaris'
 
+  # Facebook custom User-Agent string
+  - regex: 'FBSN/(iPhone OS);FBSV/(\d+).(\d+)(?:\.(\d+))?;'
+    os_replacement: 'iOS'
+
 device_parsers:
   ##########
   # incomplete!

@@ -2023,3 +2023,9 @@ test_cases:
     patch: '2'
     patch_minor:
 
+  - user_agent_string: '(null) [FBAN/FBIOS;FBAV/22.0.0.11.27;FBBV/6183821;FBDV/iPhone6,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/8.0.2;FBSS/2; FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5'
+    family: 'iOS'
+    major: '8'
+    minor: '0'
+    patch: '2'
+    patch_minor:
