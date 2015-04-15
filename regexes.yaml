@@ -1,6 +1,18 @@
 user_agent_parsers:
   #### SPECIAL CASES TOP ####
 
+  # We care about FB webviews alott, so separate them out
+  - regex: 'FBMD/(iPhone|iPod touch|iPad)'
+    family_replacement: 'Facebook WebView iOS'
+
+  - regex: 'FB_IAB/FB4A'
+    family_replacement: 'Facebook WebView Android'
+
+  - regex: 'Twitter for (iPhone|iPad)'
+
+  - regex: 'Twitter'
+    family_replacement: 'Generic Twitter'
+
   # HbbTV standard defines what features the browser should understand.
   # but it's like targeting "HTML5 browsers", effective browser support depends on the model
   # See os_parsers if you want to target a specific TV
