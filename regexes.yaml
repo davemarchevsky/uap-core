@@ -156,10 +156,15 @@ user_agent_parsers:
   - regex: '(Silk)/(\d+)\.(\d+)(?:\.([0-9\-]+))?'
     family_replacement: 'Amazon Silk'
 
-  # Twitter Android Webview - e.g.: Mozilla/5.0 (Linux; Android 5.1; Nexus 5 Build/LMY47D; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/42.0.2311.137 Mobile Safari/537.36
-  # This parses to 'Chrome Mobile' UA family, but note the wv) at the end, indicating Twitter Webview
+  # Android Webview - e.g.: Mozilla/5.0 (Linux; Android 5.1; Nexus 5 Build/LMY47D; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/42.0.2311.137 Mobile Safari/537.36
+  # This parses to 'Chrome Mobile' UA family, but note the wv) at the end, indicating Generic Android Webview
   - regex: 'wv\).*(Chrome)/(\d+)\.(\d+)\.(\d+)\.(\d+) Mobile'
-    family_replacement: 'Twitter Webview'
+    family_replacement: 'Generic Webview'
+
+  # Android Webview - e.g.: Mozilla/5.0 (Linux; Android 4.4.4; XT1045 Build/KXB21.14-L1.56) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36
+  # This parses to 'Chome' or 'Chrome Mobile' UA family, but note the Version/4.0 before Chrome/33..., indicating Generic Android Webview
+  - regex: 'Version/(\d+).(\d+) (Chrome)/(\d+)\.(\d+)\.(\d+)\.(\d+)'
+    family_replacement: 'Generic Webview'
 
   # @ref: http://www.puffinbrowser.com
   - regex: '(Puffin)/(\d+)\.(\d+)(?:\.(\d+))?'
