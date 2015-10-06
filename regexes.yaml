@@ -9,6 +9,7 @@ user_agent_parsers:
     family_replacement: 'Facebook WebView Android'
 
   - regex: 'Twitter for (iPhone|iPad)'
+    family_replacement: 'Twitter for iOS'
 
   - regex: 'Twitter'
     family_replacement: 'Generic Twitter'
